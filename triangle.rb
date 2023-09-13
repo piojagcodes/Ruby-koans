@@ -14,6 +14,11 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  sorted_triangle_length = [a,b,c].sort
+  raise TriangleError if (sorted_triangle_length[0] + sorted_triangled_length[1] <= sorted_triangle_length[2])
+  raise TriangleError if (a <= 0 || b <= 0 || c <= 0)
+
+
   if a == b && b == c && a == c
     :equilateral 
   elsif (a == b) || (a == c) || (b == c)
